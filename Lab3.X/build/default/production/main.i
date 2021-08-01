@@ -2737,6 +2737,7 @@ void main(void) {
     Setup();
     while(1){
         ADCL();
+        PORTB = anlec;
     }
 }
 

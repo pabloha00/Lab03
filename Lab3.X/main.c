@@ -1,8 +1,8 @@
 /*
- * File:   Lab 2
+ * File:   Lab 3
  * Author: Pablo Herrarte
  * Curso: Electrónica Digital 2 
- * Fecha: 27/07/2021
+ * Fecha: 3/08/2021
  * SLAVE
  */
 
@@ -75,6 +75,7 @@ void main(void) {
     Setup();    //Setup
     while(1){
         ADCL();
+        PORTB = anlec;
     }
 }
 

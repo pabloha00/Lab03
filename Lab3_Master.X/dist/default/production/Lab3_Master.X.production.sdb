@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 0 ]
-"138 C:\Users\user\OneDrive\Escritorio\Ciclo 2 2021\Digital 2\Lab3\Lab3_Master.X\main.c
+"138 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\main.c
 [e E1292 . `uc
 SPI_MASTER_OSC_DIV4 32
 SPI_MASTER_OSC_DIV16 33
@@ -24,7 +24,7 @@ SPI_CLOCK_IDLE_LOW 0
 SPI_IDLE_2_ACTIVE 0
 SPI_ACTIVE_2_IDLE 64
 ]
-"3 C:\Users\user\OneDrive\Escritorio\Ciclo 2 2021\Digital 2\Lab3\Lab3_Master.X\SPI_1.c
+"3 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\SPI_1.c
 [e E1264 . `uc
 SPI_MASTER_OSC_DIV4 32
 SPI_MASTER_OSC_DIV16 33
@@ -45,7 +45,7 @@ SPI_CLOCK_IDLE_LOW 0
 SPI_IDLE_2_ACTIVE 0
 SPI_ACTIVE_2_IDLE 64
 ]
-"3 C:\Users\user\OneDrive\Escritorio\Ciclo 2 2021\Digital 2\Lab3\Lab3_Master.X\ASCII_1.c
+"3 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\ASCII_1.c
 [v _num_ascii num_ascii `(uc  1 e 1 0 ]
 "5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
@@ -61,7 +61,7 @@ SPI_ACTIVE_2_IDLE 64
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"71 C:\Users\user\OneDrive\Escritorio\Ciclo 2 2021\Digital 2\Lab3\Lab3_Master.X\main.c
+"71 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\main.c
 [v _ISR ISR `II(v  1 e 1 0 ]
 "85
 [v _main main `(v  1 e 1 0 ]
@@ -73,7 +73,7 @@ SPI_ACTIVE_2_IDLE 64
 [v _envio envio `(v  1 e 1 0 ]
 "176
 [v _CONTADOR CONTADOR `(v  1 e 1 0 ]
-"3 C:\Users\user\OneDrive\Escritorio\Ciclo 2 2021\Digital 2\Lab3\Lab3_Master.X\SPI_1.c
+"3 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\SPI_1.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
 "20
 [v _spiReceiveWait spiReceiveWait `(v  1 s 1 spiReceiveWait ]
@@ -81,7 +81,7 @@ SPI_ACTIVE_2_IDLE 64
 [v _spiWrite spiWrite `(v  1 e 1 0 ]
 "38
 [v _spiRead spiRead `(uc  1 e 1 0 ]
-"3 C:\Users\user\OneDrive\Escritorio\Ciclo 2 2021\Digital 2\Lab3\Lab3_Master.X\USART_2.c
+"3 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\USART_2.c
 [v _USARTcon USARTcon `(v  1 e 1 0 ]
 "59 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
@@ -316,7 +316,7 @@ SPI_ACTIVE_2_IDLE 64
 [v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
 "4463
 [v _TRISC5 TRISC5 `VEb  1 e 0 @1085 ]
-"37 C:\Users\user\OneDrive\Escritorio\Ciclo 2 2021\Digital 2\Lab3\Lab3_Master.X\main.c
+"37 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\main.c
 [v _toggleTX toggleTX `uc  1 e 1 0 ]
 "38
 [v _v1 v1 `uc  1 e 1 0 ]
@@ -343,7 +343,7 @@ SPI_ACTIVE_2_IDLE 64
 {
 "104
 } 0
-"25 C:\Users\user\OneDrive\Escritorio\Ciclo 2 2021\Digital 2\Lab3\Lab3_Master.X\SPI_1.c
+"25 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\SPI_1.c
 [v _spiWrite spiWrite `(v  1 e 1 0 ]
 {
 [v spiWrite@dat dat `uc  1 a 1 wreg ]
@@ -362,12 +362,12 @@ SPI_ACTIVE_2_IDLE 64
 {
 "23
 } 0
-"106 C:\Users\user\OneDrive\Escritorio\Ciclo 2 2021\Digital 2\Lab3\Lab3_Master.X\main.c
+"106 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\main.c
 [v _setup setup `(v  1 e 1 0 ]
 {
 "139
 } 0
-"3 C:\Users\user\OneDrive\Escritorio\Ciclo 2 2021\Digital 2\Lab3\Lab3_Master.X\SPI_1.c
+"3 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\SPI_1.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
 {
 [v spiInit@sType sType `E1264  1 a 1 wreg ]
@@ -379,17 +379,17 @@ SPI_ACTIVE_2_IDLE 64
 [v spiInit@sType sType `E1264  1 a 1 4 ]
 "18
 } 0
-"3 C:\Users\user\OneDrive\Escritorio\Ciclo 2 2021\Digital 2\Lab3\Lab3_Master.X\USART_2.c
+"3 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\USART_2.c
 [v _USARTcon USARTcon `(v  1 e 1 0 ]
 {
 "16
 } 0
-"141 C:\Users\user\OneDrive\Escritorio\Ciclo 2 2021\Digital 2\Lab3\Lab3_Master.X\main.c
+"141 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\main.c
 [v _LECT1 LECT1 `(v  1 e 1 0 ]
 {
 "148
 } 0
-"3 C:\Users\user\OneDrive\Escritorio\Ciclo 2 2021\Digital 2\Lab3\Lab3_Master.X\ASCII_1.c
+"3 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\ASCII_1.c
 [v _num_ascii num_ascii `(uc  1 e 1 0 ]
 {
 [v num_ascii@num num `uc  1 a 1 wreg ]
@@ -433,7 +433,7 @@ SPI_ACTIVE_2_IDLE 64
 [v ___awdiv@dividend dividend `i  1 p 2 6 ]
 "41
 } 0
-"176 C:\Users\user\OneDrive\Escritorio\Ciclo 2 2021\Digital 2\Lab3\Lab3_Master.X\main.c
+"176 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\main.c
 [v _CONTADOR CONTADOR `(v  1 e 1 0 ]
 {
 "194
