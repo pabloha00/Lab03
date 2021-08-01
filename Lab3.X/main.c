@@ -3,6 +3,7 @@
  * Author: Pablo Herrarte
  * Curso: Electrónica Digital 2 
  * Fecha: 27/07/2021
+ * SLAVE
  */
 
 // PIC16F887 Configuration Bit Settings
@@ -26,9 +27,9 @@
 #include <xc.h>
 #include <stdint.h>
 #include <pic16f887.h>
-#include "ADC1.h"                //ADC
-#include "USART.h"              //CONFIGURACIÓN USART
-#define _XTAL_FREQ 4000000      //Frecuencia a trabajar
+#include "ADC_2.h"
+#include "SPI_2.h"          
+#define _XTAL_FREQ 8000000      //Frecuencia a trabajar
 // #pragma config statements should precede project file includes.
 // Use project enums instead of #define for ON and OFF.
 
@@ -37,6 +38,8 @@ uint8_t nowadc = 0; //Variables para controlar adc
 uint8_t anlec = 0;
 uint8_t v1 = 0; //Valores de los potenciómetros
 uint8_t v2 = 0;
+uint8_t P1 = 0;
+uint8_t P2 = 0;
 uint8_t T = 1;  //Toggle para controlar dos señales analógicas
 
 /***********************PROTOTIPO FUNCIONES**********************************/
@@ -47,18 +50,32 @@ void ADCL(void);    //Lectura ADC
 void __interrupt() ISR(void){
     if(INTCONbits.TMR0IF == 1){ //Interrupción del timer 0
         INTCONbits.TMR0IF = 0;
-        TMR0 = 236;
+        TMR0 = 216;
         nowadc++; //Se va sumando el valor de la variable de la ADC cada vez que el timer 0 hace un ciclo
     }
     if (PIR1bits.ADIF == 1){ //Si la conversión AD fue realizada se regresa la bandera a 0
         PIR1bits.ADIF = 0;
         anlec = ADRESH; //Señal analógica        
     }
+    if(SSPIF == 1){
+        if (T==0){
+        spiRead();
+        spiWrite(v1);
+        }
+        if (T==1){
+        spiRead();
+        spiWrite(v2);
+        }
+        SSPIF = 0;
+    }
 }
 
 /******************************CICLO*******************************************/
 void main(void) {
     Setup();    //Setup
+    while(1){
+        ADCL();
+    }
 }
 
 /***************************************FUNCIONES******************************/
@@ -67,9 +84,9 @@ void Setup(void){
     ANSEL = 0;
     ANSELH = 0;
     ANSEL = 0b00000011; //Puertos analógicos y digitales
-    TRISA = 0b00000011; //Inputs para las señales analógicas
+    TRISA0 = 1; //Inputs para las señales analógicas y slave select
+    TRISA1 = 1; //Inputs para las señales analógicas y slave select
     TRISB = 0;  //Outputs
-    TRISC = 0b10000000; //Input para RX
     TRISD = 0; //Outputs
     TRISE = 0; //Outputs
     PORTA = 0; //Potenciometros
@@ -84,17 +101,20 @@ void Setup(void){
     INTCONbits.T0IE = 1; //Interrupción del timer 0
     INTCONbits.RBIE = 0;
     PIR1bits.ADIF = 0; //Función AD lisa para comenzar
-    OSCCONbits.IRCF0 = 0; //Configuración del oscilador (4MHz)
+    PIR1bits.SSPIF = 0;         // Borramos bandera interrupci n MSSP
+    PIE1bits.SSPIE = 1;         // Habilitamos interrupci n MSSP
+    TRISAbits.TRISA5 = 1;       // Slave Select
+    OSCCONbits.IRCF0 = 1; //Configuración del oscilador (4MHz)
     OSCCONbits.IRCF1 = 1;
     OSCCONbits.IRCF2 = 1;
     ADC_init(20, 20);   //Se escoge velocidad y canal para ADC
     ADCON1 = 0;
-    TMR0 = 236; //Donde comienza el timer 0
+    TMR0 = 216; //Donde comienza el timer 0
     OPTION_REG = 0b01010111; //Configuración de timer 0 y pull ups
     PIE1bits.ADIE = 1;  //Habilitar ADC
-    PIE1bits.RCIE = 1;  //Habilita EUSART Recieve Interrupt
-    PIE1bits.TXIE = 1;  //Habilita EUSART Transmit Interrupt
+    spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 }
+
 void ADCL(void){ //Función de ADC
     if (nowadc > 5){ //Si la variable nowadc es mayor a 5 regresará a 0 y comienza la converción AD
      nowadc = 0;
@@ -102,13 +122,11 @@ void ADCL(void){ //Función de ADC
         if (T==0){ //Se crea un toggle para leer ambos potenciómetros
          ADC_init(1, 20); //Se escoge el canal
          v1 = anlec;  //Se lee señal analógica
-         __delay_us(100);
          T = 1;
     }
         else{
          ADC_init(1, 1); //Se escoge el otro canal
          v2 = anlec; //Se lee señal analógica
-         __delay_us(100);
          T = 0;
         }    
     }
