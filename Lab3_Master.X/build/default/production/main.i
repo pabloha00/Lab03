@@ -2732,6 +2732,7 @@ char AU3 = 0;
 
 void setup(void);
 void LECT1(void);
+void LECT2(void);
 void envio(void);
 void CONTADOR(void);
 
@@ -2760,12 +2761,19 @@ void main(void) {
        v1 = spiRead();
        _delay((unsigned long)((1)*(8000000/4000.0)));
        PORTCbits.RC2 = 1;
+       PORTCbits.RC2 = 0;
+       _delay((unsigned long)((1)*(8000000/4000.0)));
+       spiWrite(0);
+       v2 = spiRead();
+       _delay((unsigned long)((1)*(8000000/4000.0)));
+       PORTCbits.RC2 = 1;
        if(signo != 13 && signo != 43 && signo != 45){
             sum = 0;
             res = 0;
         }
         CONTADOR();
         LECT1();
+        LECT2();
         PORTB = v1;
     }
     return;
@@ -2814,29 +2822,86 @@ void LECT1(void){
     AD1 = num_ascii(Dec1);
     AU1 = num_ascii(Un1);
 }
-
+void LECT2(void){
+    Cen2 = v2/51;
+    Dec2 = (((100*v2)/51-(Cen2*100))/10);
+    Un2 = (100*v2)/51-(100*Cen2+Dec2*10);
+    AC2 = num_ascii(Cen2);
+    AD2 = num_ascii(Dec2);
+    AU2 = num_ascii(Un2);
+}
 void envio(void){
     toggleTX++;
     if (toggleTX == 1){
-        TXREG = AC1;
-        PORTAbits.RA0 = 1;
+        TXREG = 0x50;
     }
     if (toggleTX == 2){
-        TXREG = 0x2E;
-        PORTAbits.RA1 = 1;
+        TXREG = 0x4F;
     }
     if (toggleTX == 3){
-        TXREG = AD1;
-        PORTAbits.RA2 = 1;
+        TXREG = 0x54;
     }
     if (toggleTX == 4){
-        TXREG = AU1;
-        PORTAbits.RA3 = 1;
+        TXREG = 0x31;
     }
     if (toggleTX == 5){
-        TXREG = 0x76;
+        TXREG = 0x3A;
     }
     if (toggleTX == 6){
+        TXREG = 0x20;
+    }
+    if (toggleTX == 7){
+        TXREG = AC1;
+    }
+    if (toggleTX == 8){
+        TXREG = 0x2E;
+    }
+    if (toggleTX == 9){
+        TXREG = AD1;
+    }
+    if (toggleTX == 10){
+        TXREG = AU1;
+    }
+    if (toggleTX == 11){
+        TXREG = 0x76;
+    }
+    if (toggleTX == 12){
+        TXREG = 0x2C;
+    }
+    if (toggleTX == 13){
+        TXREG = 0x20;
+    }
+    if (toggleTX == 14){
+        TXREG = 0x50;
+    }
+    if (toggleTX == 15){
+        TXREG = 0x4F;
+    }
+    if (toggleTX == 16){
+        TXREG = 0x54;
+    }
+    if (toggleTX == 17){
+        TXREG = 0x32;
+    }
+    if (toggleTX == 18){
+        TXREG = 0x3A;
+    }
+    if (toggleTX == 19){
+        TXREG = AC2;
+    }
+    if (toggleTX == 20){
+        TXREG = 0x2E;
+    }
+    if (toggleTX == 21){
+        TXREG = AD2;
+    }
+    if (toggleTX == 22){
+        TXREG = AU2;
+    }
+    if (toggleTX == 23){
+        TXREG = 0x76;
+    }
+    if (toggleTX == 24){
         TXREG = 13;
         toggleTX = 0;
     }

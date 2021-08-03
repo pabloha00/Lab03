@@ -58,14 +58,10 @@ void __interrupt() ISR(void){
         anlec = ADRESH; //Señal analógica        
     }
     if(SSPIF == 1){
-        if (T==0){
         spiRead();
         spiWrite(v1);
-        }
-        if (T==1){
         spiRead();
         spiWrite(v2);
-        }
         SSPIF = 0;
     }
 }

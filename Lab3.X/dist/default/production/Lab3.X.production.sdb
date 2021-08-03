@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 0 ]
-"116 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3.X\main.c
+"112 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3.X\main.c
 [e E1295 . `uc
 SPI_MASTER_OSC_DIV4 32
 SPI_MASTER_OSC_DIV16 33
@@ -57,11 +57,11 @@ SPI_ACTIVE_2_IDLE 64
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
 "50 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3.X\main.c
 [v _ISR ISR `II(v  1 e 1 0 ]
-"74
+"70
 [v _main main `(v  1 e 1 0 ]
-"83
+"79
 [v _Setup Setup `(v  1 e 1 0 ]
-"119
+"115
 [v _ADCL ADCL `(v  1 e 1 0 ]
 "4 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3.X\SPI_2.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
@@ -256,15 +256,15 @@ SPI_ACTIVE_2_IDLE 64
 [v _v2 v2 `uc  1 e 1 0 ]
 "43
 [v _T T `uc  1 e 1 0 ]
-"74
+"70
 [v _main main `(v  1 e 1 0 ]
 {
-"80
+"76
 } 0
-"83
+"79
 [v _Setup Setup `(v  1 e 1 0 ]
 {
-"117
+"113
 } 0
 "4 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3.X\SPI_2.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
@@ -278,10 +278,10 @@ SPI_ACTIVE_2_IDLE 64
 [v spiInit@sType sType `E1264  1 a 1 4 ]
 "19
 } 0
-"119 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3.X\main.c
+"115 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3.X\main.c
 [v _ADCL ADCL `(v  1 e 1 0 ]
 {
-"134
+"130
 } 0
 "3 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3.X\ADC_2.c
 [v _ADC_init ADC_init `(v  1 e 1 0 ]
@@ -295,7 +295,7 @@ SPI_ACTIVE_2_IDLE 64
 "50 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3.X\main.c
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"71
+"67
 } 0
 "26 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3.X\SPI_2.c
 [v _spiWrite spiWrite `(v  1 e 1 0 ]

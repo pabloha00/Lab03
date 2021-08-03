@@ -64,6 +64,7 @@ char AU3 = 0;
 /*************************PROTOTIPO FUNCIONES**********************************/
 void setup(void);
 void LECT1(void);   //Separación de dígitos y lectura del potenciómetro 1
+void LECT2(void);   //Separación de dígitos y lectura del potenciómetro 1
 void envio(void);   //Datos que recibirá la terminal de lectura
 void CONTADOR(void);    //Antirrebote del contador
 
@@ -92,12 +93,19 @@ void main(void) {
        v1 = spiRead();       //Estos son los datos analógicos
        __delay_ms(1);
        PORTCbits.RC2 = 1;      //Slave Deselect 
+       PORTCbits.RC2 = 0;       //Slave Select
+       __delay_ms(1);
+       spiWrite(0);         //
+       v2 = spiRead();       //Estos son los datos analógicos
+       __delay_ms(1);
+       PORTCbits.RC2 = 1;      //Slave Deselect 
        if(signo != 13 && signo != 43 && signo != 45){  //Si el caracter ingresado no es + - o enter, no se sumará ni restará
             sum = 0;
             res = 0;
         }
         CONTADOR(); //Contar leer y hacer conversión de datos
-        LECT1();    
+        LECT1();  
+        LECT2();
         PORTB = v1;
     }
     return;
@@ -146,29 +154,86 @@ void LECT1(void){ //Para el primer puerto analógica
     AD1 = num_ascii(Dec1);
     AU1 = num_ascii(Un1);
 }
-
+void LECT2(void){ //Se hace lo mismo para el segundo potenciómetro
+    Cen2 = v2/51;
+    Dec2 = (((100*v2)/51-(Cen2*100))/10);
+    Un2 = (100*v2)/51-(100*Cen2+Dec2*10);
+    AC2 = num_ascii(Cen2);
+    AD2 = num_ascii(Dec2);
+    AU2 = num_ascii(Un2);
+}
 void envio(void){   //Lectura de la terminal virtual
     toggleTX++;     //Siempre se irá aumentando este contador para que mande datos uno por uno
-    if (toggleTX == 1){ //centena potenciómetro 1
+    if (toggleTX == 1){ //P
+        TXREG = 0x50;
+    }
+    if (toggleTX == 2){ //O
+        TXREG = 0x4F;
+    }
+    if (toggleTX == 3){ //T
+        TXREG = 0x54;
+    }
+    if (toggleTX == 4){ //1
+        TXREG = 0x31;
+    }
+    if (toggleTX == 5){ //:
+        TXREG = 0x3A;
+    }
+    if (toggleTX == 6){ //spc
+        TXREG = 0x20;
+    }
+    if (toggleTX == 7){ //centena potenciómetro 1
         TXREG = AC1;
-        PORTAbits.RA0 = 1;
     }
-    if (toggleTX == 2){ //.
+    if (toggleTX == 8){ //.
         TXREG = 0x2E;
-        PORTAbits.RA1 = 1;
     }
-    if (toggleTX == 3){//decena potenciómetro 1
+    if (toggleTX == 9){//decena potenciómetro 1
         TXREG = AD1;
-        PORTAbits.RA2 = 1;
     }
-    if (toggleTX == 4){ //u P1
+    if (toggleTX == 10){ //u P1
         TXREG = AU1;
-        PORTAbits.RA3 = 1;
     }
-    if (toggleTX == 5){ //v
+    if (toggleTX == 11){ //v
         TXREG = 0x76;
     }
-    if (toggleTX == 6){ //ent
+    if (toggleTX == 12){ //,
+        TXREG = 0x2C;
+    }
+    if (toggleTX == 13){ //spc
+        TXREG = 0x20;
+    }
+    if (toggleTX == 14){ //P
+        TXREG = 0x50;
+    }
+    if (toggleTX == 15){ //O
+        TXREG = 0x4F;
+    }
+    if (toggleTX == 16){ //T
+        TXREG = 0x54;
+    }
+    if (toggleTX == 17){ //2
+        TXREG = 0x32;
+    }
+    if (toggleTX == 18){ //:
+        TXREG = 0x3A;
+    }
+    if (toggleTX == 19){ //cent P2
+        TXREG = AC2;
+    }
+    if (toggleTX == 20){ //.
+        TXREG = 0x2E;
+    }
+    if (toggleTX == 21){ //dec P2
+        TXREG = AD2;
+    }
+    if (toggleTX == 22){ //un P2
+        TXREG = AU2;
+    }
+    if (toggleTX == 23){ //v
+        TXREG = 0x76;
+    }
+    if (toggleTX == 24){ //brk
         TXREG = 13;
         toggleTX = 0;
     }
