@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.32\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\Lab3_Master.X.production.sym \
   --cmf=dist/default/production\Lab3_Master.X.production.cmf -z -Q16F887 \
-  -oC:\Users\user\AppData\Local\Temp\xcAsgfs.4 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\user\AppData\Local\Temp\xcAs8c.5 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/Lab3_Master.X.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK \
   -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pcinit=CODE \
-  -pfunctab=ENTRY -k C:\Users\user\AppData\Local\Temp\xcAsgfs.o \
+  -pfunctab=ENTRY -k C:\Users\user\AppData\Local\Temp\xcAs8c.o \
   dist/default/production\Lab3_Master.X.production.o 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\user\AppData\Local\Temp\xcAsgfs.o
+C:\Users\user\AppData\Local\Temp\xcAs8c.o
                 end_init                              C        C        3        8       0
                 reset_vec                             0        0        3        0       0
                 config                             2007     2007        2        0       4
@@ -37,24 +37,24 @@ dist/default/production\Lab3_Master.X.production.o
                 intentry                              4        4        8        8       0
                 config                             2007     2007        2        0       4
                 text15                               20       20       F5        8       0
-                text14                              45D      45D       27        8       0
-                text13                              3FF      3FF       37        8       0
-                text12                              318      318       69        8       0
-                text11                              4A2      4A2       17        8       0
-                text10                              436      436       27        8       0
-                text9                               381      381       41        8       0
+                text14                              459      459       27        8       0
+                text13                              3FB      3FB       37        8       0
+                text12                              314      314       69        8       0
+                text11                              49E      49E       17        8       0
+                text10                              432      432       27        8       0
+                text9                               37D      37D       41        8       0
                 text8                               1E4      1E4       B2        8       0
                 text7                               115      115       CF        8       0
-                text6                               4B9      4B9       16        8       0
-                text5                               484      484       1E        8       0
-                text4                               3C2      3C2       3D        8       0
-                text3                               4E0      4E0        7        8       0
-                text2                               4CF      4CF        9        8       0
-                text1                               4E7      4E7        6        8       0
-                maintext                            296      296       82        8       0
+                text6                               4B5      4B5       16        8       0
+                text5                               480      480       1E        8       0
+                text4                               3BE      3BE       3D        8       0
+                text3                               4DC      4DC        7        8       0
+                text2                               4CB      4CB        9        8       0
+                text1                               4E3      4E3        6        8       0
+                maintext                            296      296       7E        8       0
                 cstackBANK0                          20       20       19       20       1
                 cstackCOMMON                         70       70        6       70       1
-                clrtext                             4D8      4D8        8        8       0
+                clrtext                             4D4      4D4        8        8       0
                 bssBANK0                             39       39       15       20       1
                 bssCOMMON                            76       76        4       70       1
 
@@ -67,22 +67,22 @@ TOTAL           Name                               Link     Load   Length     Sp
                 intentry                              4        4        8         0
                 reset_vec                             0        0        3         0
                 text15                               20       20       F5         0
-                text14                              45D      45D       27         0
-                text13                              3FF      3FF       37         0
-                text12                              318      318       69         0
-                text11                              4A2      4A2       17         0
-                text10                              436      436       27         0
-                text9                               381      381       41         0
+                text14                              459      459       27         0
+                text13                              3FB      3FB       37         0
+                text12                              314      314       69         0
+                text11                              49E      49E       17         0
+                text10                              432      432       27         0
+                text9                               37D      37D       41         0
                 text8                               1E4      1E4       B2         0
                 text7                               115      115       CF         0
-                text6                               4B9      4B9       16         0
-                text5                               484      484       1E         0
-                text4                               3C2      3C2       3D         0
-                text3                               4E0      4E0        7         0
-                text2                               4CF      4CF        9         0
-                text1                               4E7      4E7        6         0
-                maintext                            296      296       82         0
-                clrtext                             4D8      4D8        8         0
+                text6                               4B5      4B5       16         0
+                text5                               480      480       1E         0
+                text4                               3BE      3BE       3D         0
+                text3                               4DC      4DC        7         0
+                text2                               4CB      4CB        9         0
+                text1                               4E3      4E3        6         0
+                maintext                            296      296       7E         0
+                clrtext                             4D4      4D4        8         0
 
         CLASS   STRCODE        
 
@@ -131,7 +131,7 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000003  000003         0       0  CODE        2
-                intentry                       000004  0004E9  0004ED         8       0  CODE        2
+                intentry                       000004  0004E5  0004E9         8       0  CODE        2
                 cstackBANK0                    000020  00002E  00004E        20       1  BANK0       1
                 cstackCOMMON                   000070  00000A  00007A        70       1  COMMON      1
 
@@ -144,13 +144,13 @@ UNUSED ADDRESS RANGES
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
         CODE             0003-0003              1           2
-                         04ED-1FFF            800
+                         04E9-1FFF            800
         COMMON           007A-007D              4           1
         CONST            0003-0003              1           2
-                         04ED-1FFF            100
+                         04E9-1FFF            100
         EEDATA           2100-21FF            100           2
         ENTRY            0003-0003              1           2
-                         04ED-1FFF            100
+                         04E9-1FFF            100
         IDLOC            2000-2003              4           2
         RAM              004E-006F             22           1
                          00A0-00EF             50
@@ -162,9 +162,9 @@ UNUSED ADDRESS RANGES
         SFR3             0180-018F             10           1
         STACK            0110-016F             60           1
         STRCODE          0003-0003              1           2
-                         04ED-1FFF           1B13
+                         04E9-1FFF           1B17
         STRING           0003-0003              1           2
-                         04ED-1FFF            100
+                         04E9-1FFF            100
 
                                   Symbol Table
 
@@ -180,13 +180,13 @@ _ANSELH                  (abs)        0189
 _AU1                     bssBANK0     003B
 _AU2                     bssBANK0     003A
 _BAUDCTLbits             (abs)        0187
-_CONTADOR                text13       03FF
+_CONTADOR                text13       03FB
 _Cen1                    bssCOMMON    0076
 _Cen2                    bssBANK0     0049
 _Dec1                    bssBANK0     0047
 _Dec2                    bssBANK0     0046
 _INTCONbits              (abs)        000B
-_ISR                     text14       045D
+_ISR                     text14       0459
 _LECT1                   text8        01E4
 _LECT2                   text7        0115
 _LECT2$1177              cstackBANK0  0035
@@ -219,7 +219,7 @@ _TRISD                   (abs)        0088
 _TRISE                   (abs)        0089
 _TXREG                   (abs)        0019
 _TXSTAbits               (abs)        0098
-_USARTcon                text6        04B9
+_USARTcon                text6        04B5
 _Un1                     bssBANK0     0044
 _Un2                     bssBANK0     0043
 __Habs1                  abs1         0000
@@ -249,7 +249,7 @@ __Hsfr0                  sfr0         0000
 __Hsfr1                  sfr1         0000
 __Hsfr2                  sfr2         0000
 __Hsfr3                  sfr3         0000
-__Hspace_0               (abs)        04ED
+__Hspace_0               (abs)        04E9
 __Hspace_1               (abs)        007A
 __Hspace_2               (abs)        0000
 __Hspace_3               (abs)        0000
@@ -292,17 +292,17 @@ __Lspace_4               (abs)        0000
 __Lstack                 stack        0000
 __Lstrings               strings      0000
 __Ltext                  text         0000
-__S0                     (abs)        04ED
+__S0                     (abs)        04E9
 __S1                     (abs)        007A
 __S2                     (abs)        0000
 __S3                     (abs)        0000
-___awdiv                 text12       0318
+___awdiv                 text12       0314
 ___awdiv@counter         cstackBANK0  0029
 ___awdiv@dividend        cstackBANK0  0026
 ___awdiv@divisor         cstackBANK0  0024
 ___awdiv@quotient        cstackBANK0  002B
 ___awdiv@sign            cstackBANK0  002A
-___bmul                  text11       04A2
+___bmul                  text11       049E
 ___bmul@multiplicand     cstackCOMMON 0074
 ___bmul@multiplier       cstackBANK0  0021
 ___bmul@product          cstackBANK0  0020
@@ -311,27 +311,27 @@ ___latbits               (abs)        0002
 ___sp                    stack        0000
 ___stackhi               (abs)        0000
 ___stacklo               (abs)        0000
-___wmul                  text10       0436
+___wmul                  text10       0432
 ___wmul@multiplicand     cstackBANK0  0022
 ___wmul@multiplier       cstackBANK0  0020
 ___wmul@product          cstackCOMMON 0074
-__end_of_CONTADOR        text13       0436
-__end_of_ISR             text14       0484
+__end_of_CONTADOR        text13       0432
+__end_of_ISR             text14       0480
 __end_of_LECT1           text8        0296
 __end_of_LECT2           text7        01E4
-__end_of_USARTcon        text6        04CF
-__end_of___awdiv         text12       0381
-__end_of___bmul          text11       04B9
-__end_of___wmul          text10       045D
+__end_of_USARTcon        text6        04CB
+__end_of___awdiv         text12       037D
+__end_of___bmul          text11       04B5
+__end_of___wmul          text10       0459
 __end_of__initialization cinit        001C
 __end_of_envio           text15       0115
-__end_of_main            maintext     0318
-__end_of_num_ascii       text9        03C2
-__end_of_setup           text4        03FF
-__end_of_spiInit         text5        04A2
-__end_of_spiRead         text2        04D8
-__end_of_spiReceiveWait  text3        04E7
-__end_of_spiWrite        text1        04ED
+__end_of_main            maintext     0314
+__end_of_num_ascii       text9        03BE
+__end_of_setup           text4        03FB
+__end_of_spiInit         text5        049E
+__end_of_spiRead         text2        04D4
+__end_of_spiReceiveWait  text3        04E3
+__end_of_spiWrite        text1        04E9
 __initialization         cinit        000F
 __pbssBANK0              bssBANK0     0039
 __pbssCOMMON             bssCOMMON    0076
@@ -339,21 +339,21 @@ __pcstackBANK0           cstackBANK0  0020
 __pcstackCOMMON          cstackCOMMON 0070
 __pintentry              intentry     0004
 __pmaintext              maintext     0296
-__ptext1                 text1        04E7
-__ptext10                text10       0436
-__ptext11                text11       04A2
-__ptext12                text12       0318
-__ptext13                text13       03FF
-__ptext14                text14       045D
+__ptext1                 text1        04E3
+__ptext10                text10       0432
+__ptext11                text11       049E
+__ptext12                text12       0314
+__ptext13                text13       03FB
+__ptext14                text14       0459
 __ptext15                text15       0020
-__ptext2                 text2        04CF
-__ptext3                 text3        04E0
-__ptext4                 text4        03C2
-__ptext5                 text5        0484
-__ptext6                 text6        04B9
+__ptext2                 text2        04CB
+__ptext3                 text3        04DC
+__ptext4                 text4        03BE
+__ptext5                 text5        0480
+__ptext6                 text6        04B5
 __ptext7                 text7        0115
 __ptext8                 text8        01E4
-__ptext9                 text9        0381
+__ptext9                 text9        037D
 __size_of_CONTADOR       (abs)        0000
 __size_of_ISR            (abs)        0000
 __size_of_LECT1          (abs)        0000
@@ -372,20 +372,20 @@ __size_of_spiReceiveWait (abs)        0000
 __size_of_spiWrite       (abs)        0000
 _envio                   text15       0020
 _main                    maintext     0296
-_num_ascii               text9        0381
+_num_ascii               text9        037D
 _res                     bssBANK0     004B
-_setup                   text4        03C2
+_setup                   text4        03BE
 _signo                   bssCOMMON    0077
-_spiInit                 text5        0484
-_spiRead                 text2        04CF
-_spiReceiveWait          text3        04E0
-_spiWrite                text1        04E7
+_spiInit                 text5        0480
+_spiRead                 text2        04CB
+_spiReceiveWait          text3        04DC
+_spiWrite                text1        04E3
 _sum                     bssBANK0     004C
 _toggleTX                bssCOMMON    0078
 _v1                      bssCOMMON    0079
 _v2                      bssBANK0     004D
 btemp                    (abs)        007E
-clear_ram0               clrtext      04D8
+clear_ram0               clrtext      04D4
 end_of_initialization    cinit        001C
 interrupt_function       intentry     0004
 intlevel0                functab      0000
@@ -411,20 +411,20 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul8.c
-		___bmul        		CODE           	04A2	0000	23
+		___bmul        		CODE           	049E	0000	23
 
 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul8.c estimated size: 23
 
 USART_2.c
-		_USARTcon      		CODE           	04B9	0000	22
+		_USARTcon      		CODE           	04B5	0000	22
 
 USART_2.c estimated size: 22
 
 SPI_1.c
-		_spiWrite      		CODE           	04E7	0000	6
-		_spiInit       		CODE           	0484	0000	30
-		_spiReceiveWait		CODE           	04E0	0000	7
-		_spiRead       		CODE           	04CF	0000	9
+		_spiWrite      		CODE           	04E3	0000	6
+		_spiInit       		CODE           	0480	0000	30
+		_spiReceiveWait		CODE           	04DC	0000	7
+		_spiRead       		CODE           	04CB	0000	9
 
 SPI_1.c estimated size: 52
 
@@ -434,28 +434,28 @@ shared
 shared estimated size: 13
 
 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c
-		___awdiv       		CODE           	0318	0000	105
+		___awdiv       		CODE           	0314	0000	105
 
 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awdiv.c estimated size: 105
 
 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul16.c
-		___wmul        		CODE           	0436	0000	39
+		___wmul        		CODE           	0432	0000	39
 
 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul16.c estimated size: 39
 
 main.c
 		_LECT2         		CODE           	0115	0000	207
-		_ISR           		CODE           	045D	0000	39
-		_main          		CODE           	0296	0000	130
+		_ISR           		CODE           	0459	0000	39
+		_main          		CODE           	0296	0000	126
 		_envio         		CODE           	0020	0000	245
-		_setup         		CODE           	03C2	0000	61
+		_setup         		CODE           	03BE	0000	61
 		_LECT1         		CODE           	01E4	0000	178
-		_CONTADOR      		CODE           	03FF	0000	55
+		_CONTADOR      		CODE           	03FB	0000	55
 
-main.c estimated size: 915
+main.c estimated size: 911
 
 ASCII_1.c
-		_num_ascii     		CODE           	0381	0000	65
+		_num_ascii     		CODE           	037D	0000	65
 
 ASCII_1.c estimated size: 65
 

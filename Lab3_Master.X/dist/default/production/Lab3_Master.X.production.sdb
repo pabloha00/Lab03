@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 0 ]
-"146 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\main.c
+"145 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\main.c
 [e E1292 . `uc
 SPI_MASTER_OSC_DIV4 32
 SPI_MASTER_OSC_DIV16 33
@@ -65,15 +65,15 @@ SPI_ACTIVE_2_IDLE 64
 [v _ISR ISR `II(v  1 e 1 0 ]
 "86
 [v _main main `(v  1 e 1 0 ]
-"114
+"113
 [v _setup setup `(v  1 e 1 0 ]
-"149
+"148
 [v _LECT1 LECT1 `(v  1 e 1 0 ]
-"157
+"156
 [v _LECT2 LECT2 `(v  1 e 1 0 ]
-"165
+"164
 [v _envio envio `(v  1 e 1 0 ]
-"241
+"240
 [v _CONTADOR CONTADOR `(v  1 e 1 0 ]
 "3 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\SPI_1.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
@@ -173,7 +173,7 @@ SPI_ACTIVE_2_IDLE 64
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1478
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
-[s S156 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S155 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -183,8 +183,8 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1557
-[u S165 . 1 `S156 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES165  1 e 1 @135 ]
+[u S164 . 1 `S155 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES164  1 e 1 @135 ]
 "1602
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
 "1664
@@ -345,7 +345,7 @@ SPI_ACTIVE_2_IDLE 64
 "86
 [v _main main `(v  1 e 1 0 ]
 {
-"112
+"111
 } 0
 "25 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\SPI_1.c
 [v _spiWrite spiWrite `(v  1 e 1 0 ]
@@ -366,10 +366,10 @@ SPI_ACTIVE_2_IDLE 64
 {
 "23
 } 0
-"114 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\main.c
+"113 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\main.c
 [v _setup setup `(v  1 e 1 0 ]
 {
-"147
+"146
 } 0
 "3 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\SPI_1.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
@@ -388,15 +388,15 @@ SPI_ACTIVE_2_IDLE 64
 {
 "16
 } 0
-"157 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\main.c
+"156 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\main.c
 [v _LECT2 LECT2 `(v  1 e 1 0 ]
 {
-"164
+"163
 } 0
-"149
+"148
 [v _LECT1 LECT1 `(v  1 e 1 0 ]
 {
-"156
+"155
 } 0
 "3 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\ASCII_1.c
 [v _num_ascii num_ascii `(uc  1 e 1 0 ]
@@ -442,18 +442,18 @@ SPI_ACTIVE_2_IDLE 64
 [v ___awdiv@dividend dividend `i  1 p 2 6 ]
 "41
 } 0
-"241 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\main.c
+"240 C:\Users\user\OneDrive\Documentos\GitHub\Lab03\Lab3_Master.X\main.c
 [v _CONTADOR CONTADOR `(v  1 e 1 0 ]
 {
-"259
+"258
 } 0
 "72
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
 "84
 } 0
-"165
+"164
 [v _envio envio `(v  1 e 1 0 ]
 {
-"240
+"239
 } 0

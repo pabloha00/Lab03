@@ -31,7 +31,7 @@
      <ITEM name="nItems">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="450" x="78" flags="00000023" y="169" h="250" pid="0" iid="5">
+   <POPUP w="450" x="39" flags="00000023" y="105" h="250" pid="0" iid="5">
     <PROPERTIES>
      <ITEM name="HSplitter1Pos">100</ITEM>
      <ITEM name="VSplitter1Pos">238</ITEM>
@@ -43,7 +43,7 @@
      <ITEM name="HexMode">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="450" x="18" flags="00000023" y="140" h="250" pid="0" iid="7">
+   <POPUP w="450" x="822" flags="00000023" y="174" h="250" pid="0" iid="7">
     <PROPERTIES>
      <ITEM name="AutoEcho">0</ITEM>
      <ITEM name="HexMode">0</ITEM>

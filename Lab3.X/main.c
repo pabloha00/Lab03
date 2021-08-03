@@ -71,7 +71,6 @@ void main(void) {
     Setup();    //Setup
     while(1){
         ADCL();
-        PORTB = anlec;
     }
 }
 

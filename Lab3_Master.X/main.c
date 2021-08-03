@@ -106,7 +106,6 @@ void main(void) {
         CONTADOR(); //Contar leer y hacer conversión de datos
         LECT1();  
         LECT2();
-        PORTB = v1;
     }
     return;
 }

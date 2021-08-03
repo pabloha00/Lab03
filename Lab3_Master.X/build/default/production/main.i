@@ -2774,7 +2774,6 @@ void main(void) {
         CONTADOR();
         LECT1();
         LECT2();
-        PORTB = v1;
     }
     return;
 }
