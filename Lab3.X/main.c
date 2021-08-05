@@ -58,7 +58,7 @@ void __interrupt() ISR(void){
         anlec = ADRESH; //Señal analógica        
     }
     if(SSPIF == 1){
-        spiRead();
+        spiRead();  //Lee y escribe dos ciclos para mandar los dos potenciómetros
         spiWrite(v1);
         spiRead();
         spiWrite(v2);
@@ -70,7 +70,7 @@ void __interrupt() ISR(void){
 void main(void) {
     Setup();    //Setup
     while(1){
-        ADCL();
+        ADCL(); //Función de conversión AD
     }
 }
 
@@ -108,7 +108,7 @@ void Setup(void){
     TMR0 = 216; //Donde comienza el timer 0
     OPTION_REG = 0b01010111; //Configuración de timer 0 y pull ups
     PIE1bits.ADIE = 1;  //Habilitar ADC
-    spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
+    spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);    //Configuración del spi
 }
 
 void ADCL(void){ //Función de ADC

@@ -28,9 +28,8 @@ dato.parity   ='N'    # No parity
 dato.stopbits = 1     # Number of Stop bits = 1
 
 dato.timeout=3
-dato.port='COM1'
-dato.open()
-print(dato.is_open)
+dato.port='COM1'    #Se define puerto
+dato.open()    
 root.counter = 0                
 
 '''------------------------------------------------------------------------------
@@ -52,10 +51,11 @@ def resta():
     time.sleep(0.1)
     dato.write(b'\r')
 
+#se define función para refresh
 def refresh():
-    dato.reset_input_buffer()
-    potenciometros['text']=dato.read_until(b'\r', 24)
-    potenciometros['text']=dato.read_until(b'\r', 24)
+    dato.reset_input_buffer()   #Se limpia el buffer
+    potenciometros['text']=dato.read_until(b'\r', 24)   #Se lee hasta el enter 
+    potenciometros['text']=dato.read_until(b'\r', 24)   #Se lee nuevamente para que enseñe todos los datos
     
     
 '''------------------------------------------------------------------------------
@@ -81,16 +81,14 @@ b1.place(x=150, y=75)
 b2 = Button(root, text="Resta", command=resta)
 b2.place(x=200,y=75)
 
+#boton de refresh
 b3 = Button(root, text="Refresh", command=refresh)
 b3.place(x=175, y=180)
+
 #POTENCIOMETROS
 potenciometros=tk.Label(root, text=dato.read_until(b'\r', 24))
 potenciometros.place(x=135, y=150)
-print(dato.read_until(b'\r', 24))
+print(dato.read_until(b'\r', 24))   #Lee hasta el enter
 L = Label(root, text="Contador: 0")                      
 L.pack()
-root.mainloop()
-
-'''------------------------------------------------------------------------------
----------------------------------MAIN LOOP---------------------------------------
-------------------------------------------------------------------------------'''
+root.mainloop()     #Main loop
